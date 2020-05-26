@@ -18,6 +18,7 @@ namespace testeef.Controllers
             var categories = await context.Categories.ToListAsync();
             return categories;
         }
+        
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<Category>> Post([FromServices] DataContext context,[FromBody] Category model)
